@@ -1,0 +1,30 @@
+<div class="main">
+    <h1>List of books</h1>
+    <div class="container">
+        <div *ngFor="let book of data" class="book">
+            <div class="left">
+                <p>{{book.id}}</p>
+                <div class="info">
+                    <p>Title: {{ book.title }}</p>
+                    <p>Author: {{ book.author?.firstName }} {{ book.author?.lastName }}</p>
+                </div>
+                <div class="extra">
+                    <p>Publishing Year: {{ book.publicationDate | date: 'yyyy' }}</p>
+                    <p>Category: {{ book.category?.categoryName }}</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="btn">
+                    <button class="delete" (click)="onDeleteBook(book.id)">Delete</button>
+                    <button [routerLink]="['/show-book', book.id]" class="show-more">Show more</button>
+                    <button [routerLink]="['/update-book', book.id]" class="update">Update</button>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button routerLink="add-book">
+                Add new book
+            </button>
+        </div>
+    </div>
+</div>

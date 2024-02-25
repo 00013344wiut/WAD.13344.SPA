@@ -1,0 +1,16 @@
+<div class="main">
+    <div class="container">
+        <div class="info">
+            <h1>Title: {{data.title}}</h1>
+            <h2>Description: {{data.description}}</h2>
+            <h2>Publication year: {{ data.publicationDate | date: 'yyyy' }}</h2>
+            <h2>Pages count: {{data.pagesCount}}</h2>
+            <h2>Author Id: {{data.authorId}}</h2>
+            <h2>Category Id: {{data.categoryId}}</h2>
+        </div>
+        <div class="btns">
+            <button [routerLink]="['/update-book', data.id]" class="update">Update</button>
+            <button routerLink="" class="back">Back</button>
+        </div>
+    </div>
+</div>

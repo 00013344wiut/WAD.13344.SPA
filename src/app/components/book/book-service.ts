@@ -12,7 +12,7 @@ export class BookService {
     constructor(private httpClient: HttpClient){}
 
     getAllBooks(): Observable<BookDto[]> {
-        let url_ = 'http://localhost:5152/api/books';
+        let url_ = 'https://localhost:7093/api/books';
     
         let options_: any = {
             observe: 'response',
@@ -36,7 +36,7 @@ export class BookService {
     }
     
     deleteBookById(id: number): Observable<any> {
-        const url = `http://localhost:5152/api/books/${id}`;
+        const url = `https://localhost:7093/api/books/${id}`;
     
         let options: any = {
           body: [url],
@@ -51,7 +51,7 @@ export class BookService {
     }
 
     addBook(body: CreateBookCommand): Observable<any> {
-        const url = 'http://localhost:5152/api/books';
+        const url = 'https://localhost:7093/api/books';
 
         const formData = new FormData();
         formData.append('Title', body.title);
@@ -73,7 +73,7 @@ export class BookService {
     }
 
     updateBook(id: number, body: UpdateBookModel): Observable<any> {
-        const url = `http://localhost:5152/api/books/${id}`
+        const url = `https://localhost:7093/api/books/${id}`
 
         const formData = new FormData();
         formData.append('Title', body.title);
@@ -95,7 +95,7 @@ export class BookService {
     }
 
     getOneBook(id: number): Observable<GetBookResponse> {
-        const url = `http://localhost:5152/api/books/${id}`
+        const url = `https://localhost:7093/api/books/${id}`
 
         let options_: any = {
             observe: 'response',
