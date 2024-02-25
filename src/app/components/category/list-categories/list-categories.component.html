@@ -1,0 +1,23 @@
+<div class="main">
+    <h1>List of categories</h1>
+    <div class="container">
+        <div *ngFor="let category of data" class="category">
+            <div class="left">
+                <p>{{category.id}}</p>
+                <p>{{category.categoryName}}</p>
+            </div>
+            <div class="right">
+                <div class="btn">
+                    <button class="delete" (click)="onDeleteCategory(category.id)">Delete</button>
+                    <button [routerLink]="['/show-category', category.id]" class="show-more">Show more</button>
+                    <button [routerLink]="['/update-category', category.id]" class="update">Update</button>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button routerLink="add-category">
+                Add new category
+            </button>
+        </div>
+    </div>
+</div>

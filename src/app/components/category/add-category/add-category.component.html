@@ -1,0 +1,17 @@
+<div class="main">
+    <h1>Add category</h1>
+    <div class="container">
+      <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+        <div class="form">
+          <div class="left">
+            <label>Category name:</label>
+          </div>
+          <div class="right">
+            <input type="text" formControlName="categoryName" />
+          </div>
+        </div>
+        <button type="submit" [disabled]="categoryForm.invalid" class="add">Add Category</button>
+        <button routerLink="" class="back">Back</button>
+      </form>
+    </div>
+</div>

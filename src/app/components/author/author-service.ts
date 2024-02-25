@@ -12,7 +12,7 @@ export class AuthorService {
     constructor(private httpClient: HttpClient){}
 
     getAllAuthors(): Observable<AuthorDto[]> {
-        let url_ = 'http://localhost:5152/api/authors';
+        let url_ = 'https://localhost:7093/api/authors';
     
         let options_: any = {
             observe: 'response',
@@ -36,7 +36,7 @@ export class AuthorService {
     }
     
     deleteAuthorById(id: number): Observable<any> {
-        const url = `http://localhost:5152/api/authors/${id}`;
+        const url = `https://localhost:7093/api/authors/${id}`;
     
         let options: any = {
           body: [url],
@@ -51,7 +51,7 @@ export class AuthorService {
     }
 
     addAuthor(body: CreateAuthorCommand): Observable<any> {
-        const url = 'http://localhost:5152/api/authors';
+        const url = 'https://localhost:7093/api/authors';
 
         const formData = new FormData();
         formData.append('FirstName', body.firstName);
@@ -69,7 +69,7 @@ export class AuthorService {
     }
 
     updateAuthor(id: number, body: UpdateAuthorModel): Observable<any> {
-        const url = `http://localhost:5152/api/authors/${id}`
+        const url = `https://localhost:7093/api/authors/${id}`
 
         const formData = new FormData();
         formData.append('FirstName', body.firstName);
@@ -87,7 +87,7 @@ export class AuthorService {
     }
 
     getOneAuthor(id: number): Observable<GetAuthorResponse> {
-        const url = `http://localhost:5152/api/authors/${id}`
+        const url = `https://localhost:7093/api/authors/${id}`
 
         let options_: any = {
             observe: 'response',
