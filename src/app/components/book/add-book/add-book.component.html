@@ -1,0 +1,30 @@
+<div class="main">
+  <h1>Add book</h1>
+  <div class="container">
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form">
+        <div class="left">
+          <label>Title:</label>
+          <label>Description:</label>
+          <label>Author ID:</label>
+          <label>Pages Count:</label>
+          <label>Publication Date:</label>
+          <label>Category ID:</label>
+        </div>
+  
+        <div class="right">
+          <input type="text" formControlName="title" />
+          <input type="text" formControlName="description" />
+          <input type="number" formControlName="authorId" />
+          <input type="number" formControlName="pagesCount" />
+          <input type="date" formControlName="publicationDate" />
+          <input type="number" formControlName="categoryId" />
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="bookForm.invalid" class="add">Add Book</button>
+      <button routerLink="" class="back">Back</button>
+    </form>
+  </div>
+</div>
+  
