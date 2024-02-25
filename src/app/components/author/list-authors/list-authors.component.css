@@ -1,0 +1,60 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.container {
+    min-width: 700px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.category {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    gap: 20px;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+
+.show-more {
+    background-color: azure;
+}
+
+.update {
+    background-color: green;
+}
+
+.btns {
+    display: flex;
+    padding-top: 20px;
+}
+
+.btns button {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+button {
+    border: none;
+    height: 30px;
+    border-radius: 4px;
+}

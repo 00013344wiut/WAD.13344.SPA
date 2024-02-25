@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'WAD.13344.SPA'`, () => {
+  it(`should have as title 'WAD_17191_Front'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('WAD.13344.SPA');
+    expect(app.title).toEqual('WAD_17191_Front');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('WAD.13344.SPA app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('WAD_17191_Front app is running!');
   });
 });

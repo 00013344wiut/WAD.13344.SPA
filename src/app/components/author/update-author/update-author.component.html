@@ -1,0 +1,19 @@
+<div class="main">
+    <h1>Add author</h1>
+    <div class="container">
+      <form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+        <div class="form">
+          <div class="left">
+            <label>First Name:</label>
+            <label>Last Name:</label>
+          </div>
+          <div class="right">
+            <input type="text" formControlName="firstName" />
+            <input type="text" formControlName="lastName" />
+          </div>
+        </div>
+        <button type="submit" [disabled]="authorForm.invalid" class="add">Update Category</button>
+        <button routerLink="" class="back">Back</button>
+      </form>
+    </div>
+  </div>

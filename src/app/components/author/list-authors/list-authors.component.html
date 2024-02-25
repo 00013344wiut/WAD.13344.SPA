@@ -1,0 +1,23 @@
+<div class="main">
+    <h1>List of authors</h1>
+    <div class="container">
+        <div *ngFor="let author of data" class="category">
+            <div class="left">
+                <p>{{author.id}}</p>
+                <p>{{author.firstName}}</p>
+                <p>{{author.lastName}}</p>
+            </div>
+            <div class="right">
+                <div class="btn">
+                    <button class="delete" (click)="onDeleteAuthor(author.id)">Delete</button>
+                    <button [routerLink]="['/update-author', author.id]" class="update">Update</button>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button routerLink="add-author">
+                Add new author
+            </button>
+        </div>
+    </div>
+</div>
